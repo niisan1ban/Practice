@@ -1,6 +1,6 @@
 AはGitHub上にリモートリポジトリを用意する。
 
-1.ブラウザでGitHub(https://github.com/)にアクセスし、右上の+マークを押して「New repository」を選択する。
+1.ブラウザで[GitHub](https://github.com/)にアクセスし、右上の+マークを押して「New repository」を選択する。
 
 ![リモートリポジトリを作成1](img/1-a_リモートリポジトリを作成1.jpg)
 
