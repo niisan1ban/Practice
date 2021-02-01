@@ -48,14 +48,14 @@ $ git init
 $ git remote add origin <リモートリポジトリのURL>　
 ```
 
-![リモートリポジトリを作成3](img/1-c.jpg)
-![リモートリポジトリを作成4](img/1-d.jpg)
+![リモートリポジトリを作成3](img/1-c.JPG)
+![リモートリポジトリを作成4](img/1-d.JPG)
 
 ### Aがindex.htmlファイルを作成し、リモートリポジトリに上げる
 
 1. Practiceディレクトリ内でindex.htmlを作成し、以下の内容で保存した。
 
-![リモートリポジトリを作成5](img/1-f.jpg)
+![リモートリポジトリを作成5](img/1-f.JPG)
 
 2. git addコマンドでindex.htmlをコミット対象に設定する。その後、git commitコマンドでコミットする。このとき、-mオプションでコミットメッセージが設定できる。  
 
@@ -70,12 +70,12 @@ $ git commit -m "create index.html"
 $ git push origin master
 ```
 
-![リモートリポジトリを作成6](img/1-h.jpg)
+![リモートリポジトリを作成6](img/1-h.JPG)
 
 4. リモートリポジトリにindex.htmlが存在することを確認する。
 
-![リモートリポジトリを作成7](img/1-i.jpg)
-![リモートリポジトリを作成8](img/1-j.jpg)
+![リモートリポジトリを作成7](img/1-i.JPG)
+![リモートリポジトリを作成8](img/1-j.JPG)
 
 ## 2:BがローカルPCにHTMLファイルを取り込み、編集してAにプルリクエストする  
 
@@ -83,11 +83,11 @@ $ git push origin master
 
 1. Settingタブに切り替え、左側のメニューからManage accessをクリックする。次にInvite a collaboraterをクリックする。
 
-![コラボレーターの招待1](img/1-k.jpg)
+![コラボレーターの招待1](img/1-k.JPG)
 
 2. 招待したい人(B)のユーザー名を入力すると、該当するユーザーが表示されるのでクリックする。その後、緑色のボタンをクリックする。
 
-![コラボレーターの招待2](img/1-l.jpg)
+![コラボレーターの招待2](img/1-l.JPG)
 
 3. 招待したユーザー(B)にメールが届くので、正体を受けてもらうと正式にコラボレーターになる。   
 
@@ -147,15 +147,56 @@ $ git push origin master
 <!--ここから先は見出しのみ作成しました。適宜編集お願いします。-->
 ## 3:AがBのプルリクエストをmasterブランチにマージする  
 
+1. Pull requestsタブを選択し、開きたいプルリクエストをクリックすると、選んだプルリクエストが表示される。
+
+![プルリクエスト1](img/3-b.JPG)
+![プルリクエスト2](img/3-c.JPG)
+
+2. Commitsタブや、Files changedタブで変更点を確認する。 
+
+![プルリクエスト4](img/3-e.JPG)
+![プルリクエスト3](img/3-d.JPG)
+
+3. 問題がない場合は、Merge pull requestをクリックし、コミットメッセージを入力してConfirm mergeをクリックする。
+
+![プルリクエスト2](img/3-h.jpg)
+![プルリクエスト5](img/3-f.JPG)
+
+4. これで、マージコミットが追加された。
+
+![プルリクエスト6](img/3-g.JPG)
 
 ## 4:AがBの編集した内容をローカルPCに取り込み、index.htmlを編集してmasterブランチにマージさせる
 
+1. git pullコマンドで、ローカルリポジトリにリモートリポジトリのデータを取り込む。
+
+```
+$ git pull origin master
+```
+
+![git pull](img/4-1.JPG)
+
+2. index.htmlに変更を加える。ここでは、13行目にdivタグを追加した。
+
+![index.htmlに追記する](img/4-2.JPG)
+
+3. git addコマンドでindex.htmlをコミット対象に設定する。次に、git commitコマンドでコミットする。そして、git pushコマンドでプッシュする。
+
+```
+$ git add index.html
+$ git commit -m "update index.html"
+$ git push origin master
+```
+
+![pushする](img/4-3.JPG)
 
 ## 5:BがAの編集した内容をローカルPCに取り込み、stylesheet.cssを追加、Aにプルリクエスト
 
 
 
 ## 6:AがBのプルリクエストをmasterブランチにマージする
+
+
 
 
 
