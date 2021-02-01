@@ -41,12 +41,12 @@
 
   3. Git Bashを起動し、任意の場所にPracticeディレクトリを作成し移動する。git initでローカルリポジトリを作成し、git remote addでリモートリポジトリの設定を行う。リモートリポジトリのURLは、Codeタブ内のQuick setupで確認できる。
 
-    ```
-    $ mkdir Practice
-    $ cd Practice
-    $ git init
-    $ git remote add origin <リモートリポジトリのURL>　
-    ```
+  ```
+  $ mkdir Practice
+  $ cd Practice
+  $ git init
+  $ git remote add origin <リモートリポジトリのURL>　
+  ```
 
   ![リモートリポジトリを作成3](img/1-c.JPG)
   ![リモートリポジトリを作成4](img/1-d.JPG)
@@ -59,16 +59,16 @@
 
   2. git addコマンドでindex.htmlをコミット対象に設定する。その後、git commitコマンドでコミットする。このとき、-mオプションでコミットメッセージが設定できる。  
 
-    ```
-    $ git add index.html
-    $ git commit -m "create index.html"
-    ```
+  ```
+  $ git add index.html
+  $ git commit -m "create index.html"
+  ```
 
   3. git pushコマンドでプッシュを行う。  
 
-    ```
-    $ git push origin master
-    ```
+  ```
+  $ git push origin master
+  ```
 
   ![リモートリポジトリを作成6](img/1-h.JPG)
 
@@ -167,9 +167,9 @@
 
   1. git pullコマンドで、ローカルリポジトリにリモートリポジトリのデータを取り込む。
 
-    ```
-    $ git pull origin master
-    ```
+  ```
+  $ git pull origin master
+  ```
 
   2. index.htmlに変更を加える。ここでは、13行目にdivタグを追加した。
 
@@ -177,11 +177,11 @@
 
   3. git addコマンドでindex.htmlをコミット対象に設定する。次に、git commitコマンドでコミットする。そして、git pushコマンドでプッシュする。
 
-    ```
-    $ git add index.html
-    $ git commit -m "update index.html"
-    $ git push origin master
-    ```
+  ```
+  $ git add index.html
+  $ git commit -m "update index.html"
+  $ git push origin master
+  ```
 
 ## 5. BがAの編集した内容をローカルPCに取り込み、stylesheet.cssを追加、Aにプルリクエスト　　
 
