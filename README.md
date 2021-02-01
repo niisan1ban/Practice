@@ -41,12 +41,12 @@
 
 3. Git Bashを起動し、任意の場所にPracticeディレクトリを作成し移動する。git initでローカルリポジトリを作成し、git remote addでリモートリポジトリの設定を行う。リモートリポジトリのURLは、Codeタブ内のQuick setupで確認できる。
 
-```
-$ mkdir Practice
-$ cd Practice
-$ git init
-$ git remote add origin <リモートリポジトリのURL>　
-```
+  ```
+  $ mkdir Practice
+  $ cd Practice
+  $ git init
+  $ git remote add origin <リモートリポジトリのURL>　
+  ```
 
 ![リモートリポジトリを作成3](img/1-c.JPG)
 ![リモートリポジトリを作成4](img/1-d.JPG)
@@ -59,16 +59,16 @@ $ git remote add origin <リモートリポジトリのURL>　
 
 2. git addコマンドでindex.htmlをコミット対象に設定する。その後、git commitコマンドでコミットする。このとき、-mオプションでコミットメッセージが設定できる。  
 
-```
-$ git add index.html
-$ git commit -m "create index.html"
-```
+  ```
+  $ git add index.html
+  $ git commit -m "create index.html"
+  ```
 
 3. git pushコマンドでプッシュを行う。  
 
-```
-$ git push origin master
-```
+  ```
+  $ git push origin master
+  ```
 
 ![リモートリポジトリを作成6](img/1-h.JPG)
 
@@ -104,7 +104,6 @@ $ git push origin master
 
  ```
  $ git clone <リモートリポジトリのURL>  
-
  ```  
 
  ![中身確認](img2/17.jpg)
@@ -122,7 +121,6 @@ $ git push origin master
   $ git branch sub  #subブランチを立てる
   $ git checkout sub　#subブランチに切り替える
   $ git branch　#現在のブランチを確認する
-
   ```   
 
   2. Aのときと同じく、編集したindex.htmlをコミット、そしてプッシュする。このとき注意すべきなのが、git push origin <ブランチ名> とすることである。  
@@ -132,7 +130,6 @@ $ git push origin master
   $ git commit -m "Create branch and Change index.html"
 
   $ git push origin sub　#subブランチに上げること！！
-
   ```  
 
   3. GitHubでリモートリポジトリのmasterブランチの画面を見ると、subブランチからプルリクエストをするようにボタンがあるのでプルリクエストを行う。  
@@ -152,7 +149,7 @@ $ git push origin master
 ![プルリクエスト1](img/3-b.JPG)
 ![プルリクエスト2](img/3-c.JPG)
 
-2. Commitsタブや、Files changedタブで変更点を確認する。 
+2. Commitsタブや、Files changedタブで変更点を確認する。
 
 ![プルリクエスト4](img/3-e.JPG)
 ![プルリクエスト3](img/3-d.JPG)
@@ -166,13 +163,13 @@ $ git push origin master
 
 ![プルリクエスト6](img/3-g.JPG)
 
-## 4:AがBの編集した内容をローカルPCに取り込み、index.htmlを編集してmasterブランチにマージさせる
+## 4:AがBの編集した内容をローカルPCに取り込み、index.htmlを編集してmasterブランチにマージさせる　　
 
 1. git pullコマンドで、ローカルリポジトリにリモートリポジトリのデータを取り込む。
 
-```
-$ git pull origin master
-```
+  ```
+  $ git pull origin master
+  ```
 
 ![git pull](img/4-1.JPG)
 
@@ -182,17 +179,38 @@ $ git pull origin master
 
 3. git addコマンドでindex.htmlをコミット対象に設定する。次に、git commitコマンドでコミットする。そして、git pushコマンドでプッシュする。
 
-```
-$ git add index.html
-$ git commit -m "update index.html"
-$ git push origin master
-```
+  ```
+  $ git add index.html
+  $ git commit -m "update index.html"
+  $ git push origin master
+  ```
 
 ![pushする](img/4-3.JPG)
 
-## 5:BがAの編集した内容をローカルPCに取り込み、stylesheet.cssを追加、Aにプルリクエスト
+## 5:BがAの編集した内容をローカルPCに取り込み、stylesheet.cssを追加、Aにプルリクエスト　　
 
+ 1. git pullコマンドで、ローカルリポジトリにリモートリポジトリのデータを取り込む。　　
 
+ ```
+ $ git pull origin master
+ ```
+
+ 2. ローカルリポジトリ内にtouchでstylesheet.cssを作成する。その後、CSSファイル内に記述を追加する。
+
+ ```
+ $ touch stylesheet.css
+ ```
+
+![CSSファイル編集](img2/14.png)
+
+3. cssファイルをコミットし、リモートリポジトリのsubブランチにプッシュする。
+
+```
+$ git add stylesheet.css
+$ git commit -m "add css file."
+$ git push origin sub　#ブランチは確認しておく
+```
+4. プッシュできたら2章のときと同様に、プルリクエストを要求する。
 
 ## 6:AがBのプルリクエストをmasterブランチにマージする
 
@@ -203,3 +221,5 @@ $ git push origin master
 ***
 <注釈>  
  Aと同じく、リモートリポジトリのCodeのタブにある[Code]ボタンを押すとHTTPS,SSHといったタブが出現しURLが記載されているのでそれをコピーする。これの場合は [https ://github.com/ユーザー名/リポジトリ名.git] 。なお、SSHの方はHTTPS接続の際にパスワード要求しなくて済むための鍵認証する際に利用するが、詳細は割愛する。
+ なお、HTTPS接続する際にはこのような認証画面が出てくるのでGitHubのユーザー名およびパスワードを入力する。　　
+ <img src="img2/16.png" width=30%>
