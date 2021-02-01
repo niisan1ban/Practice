@@ -63,8 +63,50 @@ $ git push origin master
 
 ![コラボレーターの招待3](img2/01.jpg)
 ![コラボレーターの招待4](img2/02.jpg)
-![コラボレーターの招待4](img2/03.jpg)
+![コラボレーターの招待4](img2/03.png)
 
 ### A:Bのプルリクエストをマージする
 
-1. プルリク～～～
+1. Pull requestsタブを選択し、開きたいプルリクエストをクリックすると、選んだプルリクエストが表示される。
+
+![プルリクエスト1](img/3-b.jpg)
+![プルリクエスト2](img/3-c.jpg)
+
+2. Commitsタブや、Files changedタブで変更点を確認する。 
+
+![プルリクエスト4](img/3-e.jpg)
+![プルリクエスト3](img/3-d.jpg)
+
+3. 問題がない場合は、Merge pull requestをクリックし、コミットメッセージを入力してConfirm mergeをクリックする。
+
+![プルリクエスト2](img/3-h.jpg)
+![プルリクエスト5](img/3-f.jpg)
+
+4. これで、マージコミットが追加された。
+
+![プルリクエスト6](img/3-g.jpg)
+
+### Aの作業
+
+1. git pullコマンドで、ローカルリポジトリにリモートリポジトリのデータを取り込む。
+
+```
+$ git pull origin master
+```
+
+![git pull](img/4-1.jpg)
+
+2. index.htmlに変更を加える。ここでは、13行目にdivタグを追加した。
+
+![index.htmlに追記する](img/4-2.jpg)
+
+3. git addコマンドでindex.htmlをコミット対象に設定する。次に、git commitコマンドでコミットする。そして、git pushコマンドでプッシュする。
+
+```
+$ git add index.html
+$ git commit -m "update index.html"
+$ git push origin master
+```
+
+![pushする](img/4-3.jpg)
+
