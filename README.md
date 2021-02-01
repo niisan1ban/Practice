@@ -196,7 +196,7 @@ $ git push origin master
 
 ## 6:AがBのプルリクエストをmasterブランチにマージする
 
-
+3と同様の方法で、masterブランチにマージする。
 
 
 
