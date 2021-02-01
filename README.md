@@ -50,7 +50,7 @@
 
   ![リモートリポジトリを作成2](img/1-b.jpg)
 
-  3. Git Bashを起動し、任意の場所にPracticeディレクトリを作成し(mkdir)移動する(cd)。**git init** でローカルリポジトリを作成し、**git remote add** でリモートリポジトリの設定を行う。リモートリポジトリのURLは、Codeタブ内のQuick setupで確認できる。<sup>[[1]](#note1)</sup>
+  3. Git Bashを起動し、任意の場所にPracticeディレクトリを作成し(mkdir)移動する(cd)。**git init** でローカルリポジトリを作成し、**git remote add** でリモートリポジトリの設定を行う。リモートリポジトリのURLは、Codeタブ内のQuick setupで確認できる。[[1]](#note1)
 
   ```
   $ mkdir Practice
@@ -249,8 +249,8 @@
 
 ***
 <注釈>  
-<small id="note1">[1]: Aと同じく、リモートリポジトリのCodeのタブにある[Code]ボタンを押すとHTTPS,SSHといったタブが出現しURLが記載されているのでそれをコピーする。これの場合は [https ://github.com/ユーザー名/リポジトリ名.git] 。なお、SSHの方はHTTPS接続の際にパスワード要求しなくて済むための鍵認証する際に利用するが、詳細は割愛する。
+<a id="note1">[1]: Aと同じく、リモートリポジトリのCodeのタブにある[Code]ボタンを押すとHTTPS,SSHといったタブが出現しURLが記載されているのでそれをコピーする。これの場合は [https ://github.com/ユーザー名/リポジトリ名.git] 。なお、SSHの方はHTTPS接続の際にパスワード要求しなくて済むための鍵認証する際に利用するが、詳細は割愛する。
  なお、HTTPS接続する際にはこのような認証画面が出てくるのでGitHubのユーザー名およびパスワードを入力する。
  　　　
  <img src="img2/16.png" width=30%>
-</small>
+</a>
